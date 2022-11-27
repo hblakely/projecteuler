@@ -1,7 +1,6 @@
 import java.util.HashSet;
 
 public class Euler {
-
     public static void main(String[] args) {
         // output metrics
         boolean verbose = true;
