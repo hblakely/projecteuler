@@ -61,9 +61,9 @@ public class Euler {
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
         }
 
-        // 5
+        // 5 (CORRECT: 232792560)
         startTime = System.nanoTime();
-        int euler5 = Problem5.smallestDivisibleBy1through20();
+        long euler5 = Problem5.leastCommonMultiple(new long[]{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20});
         endTime = System.nanoTime();
         afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
         System.out.println("\nThe smallest positive number that is evenly divisible by all of the numbers from 1 to 20:\t"+euler5);
