@@ -1,4 +1,6 @@
 import java.util.HashSet;
+import java.util.stream.IntStream;
+import java.util.stream.LongStream;
 
 public class Euler {
     public static void main(String[] args) {
@@ -63,10 +65,21 @@ public class Euler {
 
         // 5 (CORRECT: 232792560)
         startTime = System.nanoTime();
-        long euler5 = Problem5.leastCommonMultiple(new long[]{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20});
+        long euler5 = Problem5.leastCommonMultiple(LongStream.rangeClosed(1, 20).toArray());
         endTime = System.nanoTime();
         afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
         System.out.println("\nThe smallest positive number that is evenly divisible by all of the numbers from 1 to 20:\t"+euler5);
+        if(verbose){
+            System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
+            System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
+        }
+
+        // 6 (CORRECT: 25164150)
+        startTime = System.nanoTime();
+        long euler6 = Problem6.sumSquare(100);
+        endTime = System.nanoTime();
+        afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+        System.out.println("\nThe difference between the sum of the squares of the first one hundred natural numbers and the square of the sum:\t"+euler6);
         if(verbose){
             System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
