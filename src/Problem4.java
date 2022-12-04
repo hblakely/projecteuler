@@ -28,5 +28,4 @@ public class Problem4 {
             return true;
         return false;
     }
-    //*********** https://projecteuler.net/problem=4 **********//
 }

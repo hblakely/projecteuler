@@ -1,3 +1,5 @@
+import static Helper.IsPrime.isPrime;
+
 public class Problem3 {
     //*********** https://projecteuler.net/problem=3 **********//
     //What is the largest prime factor of the number 600851475143 ?
@@ -18,14 +20,18 @@ public class Problem3 {
         }
         return largestPrimeFactor;
     }
-    private static boolean isPrime(long l){
+    /*
+    Moved to Helper Package:
+    public static boolean isPrime(long l){
         boolean isPrime = true;
         if(l==1)return false;
-        for (long factor=2; factor<l/2; factor++){
+        // I used to go from factor->l/2, but found that sqrt(l) worked.
+        for (long factor=2; factor<Math.sqrt(l); factor++){
             if(l%factor==0&&l!=factor)
                 return false;
         }
         return isPrime;
     }
+     */
     //*********** https://projecteuler.net/problem=3 **********//
 }

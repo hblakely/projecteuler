@@ -84,6 +84,17 @@ public class Euler {
             System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
         }
+
+        // 7
+        startTime = System.nanoTime();
+        long euler7 = Problem7.nthPrime(10001);
+        endTime = System.nanoTime();
+        afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+        System.out.println("\nThe 10,001st prime is:\t"+euler7);
+        if(verbose){
+            System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
+            System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
+        }
     }
 
     // HELPER METHODS TO CALCULATE MEMORY AND RUNTIME
