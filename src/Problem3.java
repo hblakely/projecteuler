@@ -20,12 +20,17 @@ public class Problem3 {
         }
         return largestPrimeFactor;
     }
+    //*********** https://projecteuler.net/problem=3 **********//
+
+    public static void main(String[] args){
+        System.out.println("\nLargest prime factor of 600851475143:\t"+largestPrimeFactor());
+    }
     /*
     Moved to Helper Package:
     public static boolean isPrime(long l){
         boolean isPrime = true;
         if(l==1)return false;
-        // I used to go from factor->l/2, but found that sqrt(l) worked.
+        // I used to go from factor->l/2, but found that factor->sqrt(l) worked.
         for (long factor=2; factor<Math.sqrt(l); factor++){
             if(l%factor==0&&l!=factor)
                 return false;
@@ -33,5 +38,4 @@ public class Problem3 {
         return isPrime;
     }
      */
-    //*********** https://projecteuler.net/problem=3 **********//
 }

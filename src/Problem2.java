@@ -18,4 +18,7 @@ public class Problem2 {
         return sum;
     }
     //*********** https://projecteuler.net/problem=2 **********//
+    public static void main(String[] args){
+        System.out.println("\nSum even Fibonacci below 4,000,000:\t"+evenFibonacci());
+    }
 }

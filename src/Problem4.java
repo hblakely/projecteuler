@@ -28,4 +28,10 @@ public class Problem4 {
             return true;
         return false;
     }
+    //*********** https://projecteuler.net/problem=4 **********//
+
+    public static void main(String[] args){
+        System.out.println("\nThe largest palindrome made from the product of two 3-digit numbers:\t"+
+                largestPalindromeProductThreeDigit());
+    }
 }

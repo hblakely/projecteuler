@@ -20,4 +20,7 @@ public class Problem1 {
         return sum;
     }
     //*********** https://projecteuler.net/problem=1 **********//
+    public static void main(String[] args){
+        System.out.println("\nSum of all multiples of 3 and 5 below 1,000:\t"+sumThreeFive());
+    }
 }

@@ -11,6 +11,8 @@ public class Problem6 {
     natural numbers and the square of the sum.
     (1^2+2^2+...+100^2) - (1+2+...+100)^2 = ?
      */
+    //*********** https://projecteuler.net/problem=6 **********//
+
     public static long sumSquare(int n){
         /*######################## Mathematical PROOFS: ########################*/
         // sumOfNaturalNumbers = n(n+1)/2
@@ -32,5 +34,11 @@ public class Problem6 {
             square+=i*i;            // Add the square of i.
         }
         return (sum*sum)-square; // Difference of sum-squared and sum-of-squares.
+    }
+    //*********** https://projecteuler.net/problem=6 **********//
+
+    public static void main(String[] args){
+        System.out.println("\nThe difference between the sum of the squares of the first one hundred natural " +
+                "numbers and the square of the sum:\t"+sumSquare(100));
     }
 }

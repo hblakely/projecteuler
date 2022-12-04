@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.stream.LongStream;
 
 public class Problem5 {
     //*********** https://projecteuler.net/problem=5 **********//
@@ -22,7 +23,8 @@ public class Problem5 {
     }
 
     // Euclidean Algorithm
-    private static long greatestCommonFactor(long a, long b){ // Iterative solution
+    // GCD of two integers can also divide their difference.
+    private static long greatestCommonFactor(long a, long b){
         while(b!=0){
             long c = a;  // c holds a-value before modulo
             a = b;      // a holds b-value before modulo
@@ -33,10 +35,14 @@ public class Problem5 {
         }
         return a;
     }
-    private static long greatestCommonFactorRecursive(long a, long b){ // Looks almost exactly like the iterative.
+    private static long greatestCommonFactorRecursive(long a, long b){
         if(b!=0)return greatestCommonFactor(b,a % b);
         else return a;
     }
-
     //*********** https://projecteuler.net/problem=5 **********//
+
+    public static void main(String[] args){
+        System.out.println("\nThe smallest positive number that is evenly divisible by all of the numbers " +
+                "from 1 to 20:\t"+leastCommonMultiple(LongStream.rangeClosed(1, 20).toArray()));
+    }
 }
