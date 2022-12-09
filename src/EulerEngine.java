@@ -1,6 +1,4 @@
 import java.math.BigInteger;
-import java.util.HashSet;
-import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 
 public class EulerEngine {
@@ -105,6 +103,16 @@ public class EulerEngine {
         endTime = System.nanoTime();
         afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
         System.out.println("Largest product of 13 adjacent integers: "+ euler8);
+        if(verbose){
+            System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
+            System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
+        }
+        // 9 (Correct: 31875000)
+        startTime = System.nanoTime();
+        int euler9 = Problem9.productOfPythagoreanTriplet();
+        endTime = System.nanoTime();
+        afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+        System.out.println("The product abc of Pythagorean triplet for which a + b + c = 1000: "+euler9);
         if(verbose){
             System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");

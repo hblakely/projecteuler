@@ -25,7 +25,7 @@ public class Problem3 {
     public static void main(String[] args){
         System.out.println("\nLargest prime factor of 600851475143:\t"+largestPrimeFactor());
     }
-    /*
+    /**
     Moved to Helper Package:
     public static boolean isPrime(long l){
         boolean isPrime = true;

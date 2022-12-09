@@ -45,4 +45,27 @@ public class Problem5 {
         System.out.println("\nThe smallest positive number that is evenly divisible by all of the numbers " +
                 "from 1 to 20:\t"+leastCommonMultiple(LongStream.rangeClosed(1, 20).toArray()));
     }
+
+    /*******************************************
+     * This is how BigInteger handles greatest-common-divisor between two BigIntegers:
+     * It's operating using the Euclidean method. I'd be curious to see the comparison between
+     * following the euclidean algorithm verbatim like this, compared to the modulo version I
+     * had implemented above.
+     * ******************************************
+     MutableBigInteger hybridGCD(MutableBigInteger b) {
+     // Use Euclid's algorithm until the numbers are approximately the
+     // same length, then use the binary GCD algorithm to find the GCD.
+     MutableBigInteger a = this;
+     MutableBigInteger q = new MutableBigInteger();
+
+     while (b.intLen != 0) {
+     if (Math.abs(a.intLen - b.intLen) < 2)
+     return a.binaryGCD(b);
+
+     MutableBigInteger r = a.divide(b, q);
+     a = b;
+     b = r;
+     }
+     return a;
+     }*/
 }
