@@ -22,7 +22,7 @@ public class Problem7 {
             return -1;
         int count = 0;
         for(int i = 2; i<=Long.MAX_VALUE; i++) // Loop til can't. Increment count when found. Compare to nth. return.
-            if(isPrime(i)) if(++count == nth) return i;
+            if(isPrime(i) && ++count == nth) return i;
         return -1; // We know something wrong happened if we get -1 as a result.
     }
     //*********** https://projecteuler.net/problem=7 **********//
