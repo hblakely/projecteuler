@@ -107,12 +107,24 @@ public class EulerEngine {
             System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
         }
+
         // 9 (Correct: 31875000)
         startTime = System.nanoTime();
         int euler9 = Problem9.productOfPythagoreanTriplet();
         endTime = System.nanoTime();
         afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
         System.out.println("The product abc of Pythagorean triplet for which a + b + c = 1000: "+euler9);
+        if(verbose){
+            System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
+            System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
+        }
+
+        // 10 (Correct: 142913828922)
+        startTime = System.nanoTime();
+        long euler10 = Problem10.sumOfPrimes(2000000);
+        endTime = System.nanoTime();
+        afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+        System.out.println("Sum of all primes below two million: "+euler10);
         if(verbose){
             System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
