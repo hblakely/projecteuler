@@ -8,6 +8,7 @@ public class Problem9 {
      * There exists exactly one Pythagorean triplet for which a + b + c = 1000.
      * Find the product abc.
      */
+    // https://projecteuler.net/problem=9
     public static int productOfPythagoreanTriplet(){
         /*
         a+b+c=1000
