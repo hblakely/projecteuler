@@ -130,6 +130,18 @@ public class EulerEngine {
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
         }
 
+        // 11 (CORRECT: 70600674)
+        startTime = System.nanoTime();
+        long euler11 = Problem11.greatestProductOfFourAdjacentNumbers();
+        endTime = System.nanoTime();
+        afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+        System.out.println("The greatest product of four adjacent numbers in the same direction: "+euler11);
+        if(verbose){
+            System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
+            System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
+        }
+
+
     }
 
     // HELPER METHODS TO CALCULATE MEMORY AND RUNTIME
