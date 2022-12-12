@@ -64,7 +64,7 @@ public class Problem11 {
             1,  70,  54,  71,  83,  51,  54,  69,  16,  92,  33,  48,  61,  43,  52,  1,  89,  19,  67,  48};
 
     public static long greatestProductOfFourAdjacentNumbers(){
-        // 1-based x,y grid values as if the array were a 1 based 2d array.
+        // x,y grid values as if the array were a 1 based 2d array.
         int[] originIndex = new int[2];
         long product = 0, current;
 
