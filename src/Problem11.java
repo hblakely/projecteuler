@@ -184,7 +184,7 @@ public class Problem11 {
     }
     private static int getIndex(int[]xy){
         // x and y are 1-based grid locations.
-        // getIndex translates these 1-based 2d locations into 0-based 1d array index.
+        // getIndex translates these 1-based 2d location into 0-based 1d array index.
         int x = xy[0]-1;
         int y = xy[1]-1;
         int index = x+(20*y);

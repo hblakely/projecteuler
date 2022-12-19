@@ -141,7 +141,16 @@ public class EulerEngine {
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
         }
 
-
+        // 12 (CORRECT: 76576500)
+        startTime = System.nanoTime();
+        int euler12 = Problem12.highlyDivisibleTriangleNumber(500);
+        endTime = System.nanoTime();
+        afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+        System.out.println("The first triangle number with over 500 divisors: "+euler12);
+        if(verbose){
+            System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
+            System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
+        }
     }
 
     // HELPER METHODS TO CALCULATE MEMORY AND RUNTIME
