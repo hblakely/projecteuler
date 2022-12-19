@@ -39,7 +39,7 @@ public class Problem11 {
     // array of integers. Then, because many of the numbers started with 0, java was complaining. I removed the 0 from
     // the front of those numbers: "([0])([1-9])" replaced with "$2". 00 didn't upset the compiler.
 
-    // The below final integers below allow us to treat our 1d array as a 2d grid.
+    // The final integers below allow us to treat our 1d array as a 2d grid.
     static final int  MIN_COLUMN=0, MAX_COLUMN = 20, MAX_ROW = 20, MIN_ROW = 0, GROUP_LENGTH = 4;
     public static int[] grid= {
             8,  2,  22,  97,  38,  15,  00,  40,  00,  75,  4,  5,  7,  78,  52,  12,  50,  77,  91,  8,
@@ -64,7 +64,7 @@ public class Problem11 {
             1,  70,  54,  71,  83,  51,  54,  69,  16,  92,  33,  48,  61,  43,  52,  1,  89,  19,  67,  48};
 
     public static long greatestProductOfFourAdjacentNumbers(){
-        // 1-based x,y grid values as if the array were a 1 based 2d array.
+        // x,y grid values as if the array were a 1 based 2d array.
         int[] originIndex = new int[2];
         long product = 0, current;
 
