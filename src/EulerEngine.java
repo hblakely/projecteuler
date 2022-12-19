@@ -151,6 +151,17 @@ public class EulerEngine {
             System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
         }
+
+        // 13 (CORRECT: 5537376230)
+        startTime = System.nanoTime();
+        String euler13 = Problem13.firstTenDigitsOfSum();
+        endTime = System.nanoTime();
+        afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+        System.out.println("First 10 digits of the sum of one hundred 50-digit numbers: "+ euler13);
+        if(verbose){
+            System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
+            System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
+        }
     }
 
     // HELPER METHODS TO CALCULATE MEMORY AND RUNTIME
