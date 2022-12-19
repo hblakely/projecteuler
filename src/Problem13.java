@@ -2,6 +2,7 @@ import java.math.BigInteger;
 
 public class Problem13 {
     /*
+        https://projecteuler.net/problem=13
         Work out the first ten digits of the sum of the following one-hundred 50-digit numbers.
         I copied the 100 numbers into sublime text and did a find and replace to make an array:
         find:       ^[0-9]+$
