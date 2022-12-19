@@ -79,25 +79,25 @@ public class Problem11 {
             // getRight if not exceeding right boundary
             if(roomOnRight){
                 current = rightProduct(originIndex);
-                product = current>product?current:product;
+                product = Math.max(current, product);
             }
 
             // getDown if not exceeding bottom boundary
             if(roomBelow){
                 current = belowProduct(originIndex);
-                product = current>product?current:product;
+                product = Math.max(current, product);
             }
 
             // getDiaganolRightDown if not exceeding right or bottom boundary
             if(roomOnRight && roomBelow){
                 current = diaganolRightDownProduct(originIndex);
-                product = current>product?current:product;
+                product = Math.max(current, product);
             }
 
             // getDiaganolLeftDown if not exceeding left or bottom boundary
             if(roomOnLeft && roomBelow){
                 current = diaganolLeftDownProduct(originIndex);
-                product = current>product?current:product;
+                product = Math.max(current, product);
             }
 
             // All other checks would be redundant. Left is handled by right. Up is handled by down.
