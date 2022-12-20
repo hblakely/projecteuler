@@ -162,6 +162,17 @@ public class EulerEngine {
             System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
         }
+
+        // 14 (CORRECT: 837799)
+        startTime = System.nanoTime();
+        int euler14 = Problem14.longestCollatzSequence();
+        endTime = System.nanoTime();
+        afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+        System.out.println("Longest Collatz Chain Initiated Under 1 million: "+euler14);
+        if(verbose){
+            System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
+            System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
+        }
     }
 
     // HELPER METHODS TO CALCULATE MEMORY AND RUNTIME
