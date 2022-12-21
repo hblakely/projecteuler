@@ -20,8 +20,6 @@ public class Problem14 {
     Which starting number, under one million, produces the longest chain?
     NOTE: Once the chain starts the terms are allowed to go above one million.
      */
-
-
     public static int longestCollatzSequence(){ // 837799 start number, 525 chain size.
         int longestCollatzSequence = 0, startNumber = 0;
         for (int i=1; i<1000000; i++) {

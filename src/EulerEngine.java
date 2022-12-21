@@ -2,19 +2,37 @@ import java.math.BigInteger;
 import java.util.stream.LongStream;
 
 public class EulerEngine {
+    // output metrics
+    public static boolean verbose = true;
+    // calculate runtime
+    public static long startTime;
+    public static long endTime;
+    // calculate memory usage
+    public static long beforeUsedMem;
+    public static long afterUsedMem;
+
+    // Calculating Memory outside of runtime to get better speed estimate.
+    // So far it seems that the way I'm tracking memory for each method doesn't work.
+
     public static void main(String[] args) {
-        // output metrics
-        boolean verbose = true;
-        // calculate runtime
-        long startTime;
-        long endTime;
-        // calculate memory usage
-        long beforeUsedMem;
-        long afterUsedMem;
+        problem1();
+        problem2();
+        problem3();
+        problem4();
+        problem5();
+        problem6();
+        problem7();
+        problem8();
+        problem9();
+        problem10();
+        problem11();
+        problem12();
+        problem13();
+        problem14();
+        problem15();
+    }
 
-        // Calculating Memory outside of runtime to get better speed estimate.
-        // So far it seems that the way I'm tracking memory for each method doesn't work.
-
+    private static void problem1(){
         // 1 (CORRECT: 233168)
         beforeUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
         startTime = System.nanoTime();
@@ -26,7 +44,9 @@ public class EulerEngine {
             System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
         }
+    }
 
+    private static void problem2(){
         // 2 (CORRECT: 4613732)
         beforeUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
         startTime = System.nanoTime();
@@ -38,7 +58,9 @@ public class EulerEngine {
             System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
         }
+    }
 
+    private static void problem3(){
         // 3 (CORRECT: 6857)
         beforeUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
         startTime = System.nanoTime();
@@ -50,7 +72,8 @@ public class EulerEngine {
             System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
         }
-
+    }
+    private static void problem4(){
         // 4 (CORRECT: 906609)
         startTime = System.nanoTime();
         int euler4 = Problem4.largestPalindromeProductThreeDigit();
@@ -61,7 +84,8 @@ public class EulerEngine {
             System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
         }
-
+    }
+    private static void problem5(){
         // 5 (CORRECT: 232792560)
         startTime = System.nanoTime();
         long euler5 = Problem5.leastCommonMultiple(LongStream.rangeClosed(1, 20).toArray());
@@ -73,7 +97,8 @@ public class EulerEngine {
             System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
         }
-
+    }
+    private static void problem6(){
         // 6 (CORRECT: 25164150)
         startTime = System.nanoTime();
         long euler6 = Problem6.sumSquare(100);
@@ -85,7 +110,8 @@ public class EulerEngine {
             System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
         }
-
+    }
+    private static void problem7(){
         // 7 (CORRECT: 104743)
         startTime = System.nanoTime();
         long euler7 = Problem7.nthPrime(10001);
@@ -96,7 +122,8 @@ public class EulerEngine {
             System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
         }
-
+    }
+    private static void problem8(){
         // 8 (CORRECT: 23514624000)
         startTime = System.nanoTime();
         BigInteger euler8 = Problem8.largestProdcutAdjacent13();
@@ -107,7 +134,8 @@ public class EulerEngine {
             System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
         }
-
+    }
+    private static void problem9(){
         // 9 (Correct: 31875000)
         startTime = System.nanoTime();
         int euler9 = Problem9.productOfPythagoreanTriplet();
@@ -118,7 +146,8 @@ public class EulerEngine {
             System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
         }
-
+    }
+    private static void problem10(){
         // 10 (Correct: 142913828922)
         startTime = System.nanoTime();
         long euler10 = Problem10.sumOfPrimes(2000000);
@@ -129,7 +158,8 @@ public class EulerEngine {
             System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
         }
-
+    }
+    private static void problem11(){
         // 11 (CORRECT: 70600674)
         startTime = System.nanoTime();
         long euler11 = Problem11.greatestProductOfFourAdjacentNumbers();
@@ -140,7 +170,8 @@ public class EulerEngine {
             System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
         }
-
+    }
+    private static void problem12(){
         // 12 (CORRECT: 76576500)
         startTime = System.nanoTime();
         int euler12 = Problem12.highlyDivisibleTriangleNumber(500);
@@ -151,7 +182,8 @@ public class EulerEngine {
             System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
         }
-
+    }
+    private static void problem13(){
         // 13 (CORRECT: 5537376230)
         startTime = System.nanoTime();
         String euler13 = Problem13.firstTenDigitsOfSum();
@@ -162,7 +194,8 @@ public class EulerEngine {
             System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
         }
-
+    }
+    private static void problem14(){
         // 14 (CORRECT: 837799)
         startTime = System.nanoTime();
         int euler14 = Problem14.longestCollatzSequence();
@@ -174,6 +207,20 @@ public class EulerEngine {
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
         }
     }
+    private static void problem15(){
+        // 15 (CORRECT: 137846528820)
+        startTime = System.nanoTime();
+        BigInteger euler15 = Problem15.uniqueLatticePaths(20,20);
+        endTime = System.nanoTime();
+        afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+        System.out.println("Unique lattice paths moving only right or down in a 20x20 grid: "+euler15);
+        if(verbose){
+            System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
+            System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
+        }
+    }
+
+
 
     // HELPER METHODS TO CALCULATE MEMORY AND RUNTIME
     private static String timeElapsed(long startNano, long endNano){
