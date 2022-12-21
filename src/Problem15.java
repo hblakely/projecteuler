@@ -36,10 +36,10 @@ public class Problem15 {
      */
 
     // My first attempt I didn't realize that we were calculating the points of the cell, not the cell itself. 
-    //  Normally there are 4 points to a cell, which would make you think that you should have 8 points for a 2x2 grid. 
+    //  Normally there are 4 points to a cell, which would make you think that you should have 8 points for a 1x2 grid.
     //  That's not right, though; because the cells share points. I realized later that the 2x2 cell-grid was really a 
     //  3x3 point-grid. If a 2x2 grid was really 3x3 points, then a 20x20 grid would be 21x21 points. 
-    // I adjusted my algorithm to add 1 to the length and width of the grid and got the correct answer.
+    // I adjusted my algorithm to add 1 to length and width of the grid and got the correct answer.
     // I used BigInteger to avoid overflow, and to make the algorithm reusable at different sizes. Example 100x100
     private static BigInteger one = new BigInteger("1");
     public static BigInteger uniqueLatticePaths(int m, int n){
