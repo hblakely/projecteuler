@@ -30,6 +30,8 @@ public class EulerEngine {
         problem13();
         problem14();
         problem15();
+        problem16();
+        problem17();
     }
 
     private static void problem1(){
@@ -219,6 +221,35 @@ public class EulerEngine {
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
         }
     }
+
+    private static void problem16(){
+        // 16 (CORRECT: 1366)
+        startTime = System.nanoTime();
+        int euler16 = Problem16.powerDigitSum(1000);
+        endTime = System.nanoTime();
+        afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+        System.out.println("The sum of digits for the number 2^1000: "+euler16);
+        if(verbose){
+            System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
+            System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
+        }
+    }
+
+    private static void problem17(){
+        // 17 (CORRECT: 21124)
+        startTime = System.nanoTime();
+        int euler17 = Problem17.numberLetterCounts(1000);
+        endTime = System.nanoTime();
+        afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+        System.out.println
+                ("Combined length of words representing each number from 1 to 1000: "+euler17);
+        if(verbose){
+            System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
+            System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
+        }
+    }
+
+
 
 
 
