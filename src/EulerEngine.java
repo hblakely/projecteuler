@@ -32,6 +32,7 @@ public class EulerEngine {
         problem15();
         problem16();
         problem17();
+        problem18();
     }
 
     private static void problem1(){
@@ -249,6 +250,18 @@ public class EulerEngine {
         }
     }
 
+    private static void problem18(){
+        // 18 (CORRECT: 1074)
+        startTime = System.nanoTime();
+        int euler18 = Problem18.maximumPathSum(Problem18.triangleNums);
+        endTime = System.nanoTime();
+        afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+        System.out.println("The maximum path-sum is: "+euler18);
+        if(verbose){
+            System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
+            System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
+        }
+    }
 
 
 
