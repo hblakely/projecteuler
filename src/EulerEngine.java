@@ -34,6 +34,7 @@ public class EulerEngine {
         problem17();
         problem18();
         problem19();
+        problem20();
     }
 
     private static void problem1(){
@@ -271,6 +272,19 @@ public class EulerEngine {
         endTime = System.nanoTime();
         afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
         System.out.println("Number of Sundays to land on the 1st of the month from Jan-1-1991 to Dec-31-200 : "+euler19);
+        if(verbose){
+            System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
+            System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
+        }
+    }
+
+    private static void problem20(){
+        // 20 (CORRECT: 648)
+        startTime = System.nanoTime();
+        int euler20 = Problem20.factoralDigitSum(100);
+        endTime = System.nanoTime();
+        afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+        System.out.println("Sum of digits of 100! = "+euler20);
         if(verbose){
             System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
