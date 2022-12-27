@@ -33,6 +33,7 @@ public class EulerEngine {
         problem16();
         problem17();
         problem18();
+        problem19();
     }
 
     private static void problem1(){
@@ -257,6 +258,19 @@ public class EulerEngine {
         endTime = System.nanoTime();
         afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
         System.out.println("The maximum path-sum is: "+euler18);
+        if(verbose){
+            System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
+            System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
+        }
+    }
+
+    private static void problem19(){
+        // 19 (CORRECT: 171)
+        startTime = System.nanoTime();
+        int euler19 = Problem19.numTwentiethCenturySundays();
+        endTime = System.nanoTime();
+        afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+        System.out.println("Number of Sundays to land on the 1st of the month from Jan-1-1991 to Dec-31-200 : "+euler19);
         if(verbose){
             System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
