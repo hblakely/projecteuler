@@ -37,6 +37,7 @@ public class EulerEngine {
         problem20();
         problem21();
         problem22();
+        problem23();
     }
 
     private static void problem1(){
@@ -313,6 +314,20 @@ public class EulerEngine {
         endTime = System.nanoTime();
         afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
         System.out.println("Total of all the name scores in the file: "+euler22);
+        if(verbose){
+            System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
+            System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
+        }
+    }
+
+    private static void problem23(){
+        // 23 (CORRECT: 4179871)
+        startTime = System.nanoTime();
+        int euler23 = Problem23.sumPositiveNonAbundant();
+        endTime = System.nanoTime();
+        afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+        System.out.println("Sum of all the positive integers that are not the sum of two abundant numbers: "
+                +euler23);
         if(verbose){
             System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
