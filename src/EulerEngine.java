@@ -36,6 +36,7 @@ public class EulerEngine {
         problem19();
         problem20();
         problem21();
+        problem22();
     }
 
     private static void problem1(){
@@ -299,6 +300,19 @@ public class EulerEngine {
         endTime = System.nanoTime();
         afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
         System.out.println("Sum of Amicable Numbers below 10000: "+euler21);
+        if(verbose){
+            System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
+            System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
+        }
+    }
+
+    private static void problem22(){
+        // 22 (CORRECT: 871198282)
+        startTime = System.nanoTime();
+        BigInteger euler22 = Problem22.nameScores();
+        endTime = System.nanoTime();
+        afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+        System.out.println("Total of all the name scores in the file: "+euler22);
         if(verbose){
             System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");

@@ -42,7 +42,7 @@ public class Problem21 {
         return sum;
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args){ // 31626
         System.out.println("Sum of Amicable Numbers below 10000: "+sumAmicable(10000));
     }
 }
