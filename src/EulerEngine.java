@@ -35,6 +35,7 @@ public class EulerEngine {
         problem18();
         problem19();
         problem20();
+        problem21();
     }
 
     private static void problem1(){
@@ -285,6 +286,19 @@ public class EulerEngine {
         endTime = System.nanoTime();
         afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
         System.out.println("Sum of digits of 100! = "+euler20);
+        if(verbose){
+            System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
+            System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
+        }
+    }
+
+    private static void problem21(){
+        // 21 (CORRECT: 31626)
+        startTime = System.nanoTime();
+        int euler21 = Problem21.sumAmicable(10000);
+        endTime = System.nanoTime();
+        afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+        System.out.println("Sum of Amicable Numbers below 10000: "+euler21);
         if(verbose){
             System.out.println("Runtime:\t\t"+ timeElapsed(startTime,endTime));
             System.out.println("Memory Usage:\t"+ memoryUsed(beforeUsedMem,afterUsedMem)+"\n");
