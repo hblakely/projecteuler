@@ -42,7 +42,7 @@ public class Problem23 {
         return sum;
     }
     private static boolean isAbundant(int num){
-        HashSet<Integer> divisors = getDivisors(num);
+        HashSet<Integer> divisors = getDivisors(num); // maybe not the most efficient
         int sum = 0;
         for(Integer i : divisors)
             sum+=i;
@@ -52,7 +52,7 @@ public class Problem23 {
 
         return false;
     }
-    private static boolean abundantSum(int num){
+    private static boolean abundantSum(int num){ // Maybe not the most efficient
         for(Integer a: abundantNums){
             if(abundantNums.contains(num-a))
                 return true;
